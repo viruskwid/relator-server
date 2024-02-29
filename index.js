@@ -8,7 +8,7 @@ rEServer.use(cors())
 rEServer.use(express.json())
 rEServer.use(router)
 rEServer.use('/uploads',express.static('./uploads'))
-const PORT = 3000
+const PORT = 3000 || process.env.PORT
 
 rEServer.listen(PORT,()=>{
     console.log(`OUR REALESTATE PROJECT STARTED AT ${PORT}`);
